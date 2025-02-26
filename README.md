@@ -3,7 +3,7 @@ This is an educational project on data cleaning and preparation using SQL. The o
 
 Let's inspect the initial rows to analyze the data in its original format.
 
-SELECT * FROM club_member_info cmi LIMIT 10
+`SELECT * FROM club_member_info cmi LIMIT 10
 
 ++The result:++
 
