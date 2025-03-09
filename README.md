@@ -72,3 +72,10 @@ WHERE age >100 OR age < 0 OR age = '';
 |joete cudiff|51|divorced|jcudiff7@ycombinator.com|616-617-0965|975 Dwight Plaza,Grand Rapids,Michigan|Research Nurse|11/16/2014|
 |mendie alexandrescu|46|single|malexandrescu8@state.gov|504-918-4753|34 Delladonna Terrace,New Orleans,Louisiana|Systems Administrator III|3/12/1921|
 |fey kloss|52|married|fkloss9@godaddy.com|808-177-0318|8976 Jackson Park,Honolulu,Hawaii|Chemical Engineer|11/5/2014|
+#### Yêu cầu số 4.3: Xóa các dòng có email duplicate
+```sql
+DELETE FROM club_member_info_cleaned
+WHERE rowid NOT IN
+(SELECT MIN(rowid) FROM club_member_info_cleaned
+GROUP BY email);
+```
